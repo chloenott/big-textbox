@@ -9,7 +9,7 @@ Features:
 - Font size decreases automatically to fit all the text on one screen.
 - Transitions were added to make it feel more natural. For example, when the editing area slides into view from the top, the big textbox area simultaneously blurs out of focus. Quick durations so that they don't impede functionality.
 - Interface is reasonably intuitive. The user can tap the screen to bring up the edit menu, and tap again (or use the Done button) to close it.
-- An app icon was created trying to keep the style guidelines in mind.
+- An app icon was created with the style guidelines in mind.
 
 Wishlist:
 
