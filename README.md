@@ -1,5 +1,5 @@
 # Big Textbox
-<img src="big-text icon.png" width="100">
+<img src="rounded-corner-icon.png" width="100">
 Big Textbox is an unreleased iOS app that displays large text of the contents in the text editor. It is my first app.
 
 The purpose of this app is to solve the amusingly common problem I have of: "I wish I could order food in person without repeating myself a bunch of times, because I have a quiet voice and the mask makes me even quieter." Plus, germs spread from talking, so visual communication seems like a good idea anyway.
