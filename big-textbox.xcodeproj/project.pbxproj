@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B008EE826E57AD100B34CE5 /* big_textApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B008EE726E57AD100B34CE5 /* big_textApp.swift */; };
-		2B008EEA26E57AD100B34CE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B008EE926E57AD100B34CE5 /* ContentView.swift */; };
 		2B008EEC26E57AD300B34CE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B008EEB26E57AD300B34CE5 /* Assets.xcassets */; };
 		2B008EEF26E57AD300B34CE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B008EEE26E57AD300B34CE5 /* Preview Assets.xcassets */; };
+		2B3F464126ECDB72003B122E /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3F464026ECDB72003B122E /* EditorView.swift */; };
+		2B3F464326ECDB7E003B122E /* BigTextBox_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3F464226ECDB7E003B122E /* BigTextBox_App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B008EE426E57AD100B34CE5 /* big-text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "big-text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B008EE726E57AD100B34CE5 /* big_textApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = big_textApp.swift; sourceTree = "<group>"; };
-		2B008EE926E57AD100B34CE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B008EEB26E57AD300B34CE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B008EEE26E57AD300B34CE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B008EF026E57AD300B34CE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B3F464026ECDB72003B122E /* EditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		2B3F464226ECDB7E003B122E /* BigTextBox_App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigTextBox_App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +36,7 @@
 		2B008EDB26E57AD100B34CE5 = {
 			isa = PBXGroup;
 			children = (
-				2B008EE626E57AD100B34CE5 /* big-text */,
+				2B008EE626E57AD100B34CE5 /* big-textbox */,
 				2B008EE526E57AD100B34CE5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,16 +49,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2B008EE626E57AD100B34CE5 /* big-text */ = {
+		2B008EE626E57AD100B34CE5 /* big-textbox */ = {
 			isa = PBXGroup;
 			children = (
-				2B008EE726E57AD100B34CE5 /* big_textApp.swift */,
-				2B008EE926E57AD100B34CE5 /* ContentView.swift */,
 				2B008EEB26E57AD300B34CE5 /* Assets.xcassets */,
+				2B3F464226ECDB7E003B122E /* BigTextBox_App.swift */,
+				2B3F464026ECDB72003B122E /* EditorView.swift */,
 				2B008EF026E57AD300B34CE5 /* Info.plist */,
 				2B008EED26E57AD300B34CE5 /* Preview Content */,
 			);
-			path = "big-text";
+			path = "big-textbox";
 			sourceTree = "<group>";
 		};
 		2B008EED26E57AD300B34CE5 /* Preview Content */ = {
@@ -100,10 +100,11 @@
 				TargetAttributes = {
 					2B008EE326E57AD100B34CE5 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
-			buildConfigurationList = 2B008EDF26E57AD100B34CE5 /* Build configuration list for PBXProject "big-text" */;
+			buildConfigurationList = 2B008EDF26E57AD100B34CE5 /* Build configuration list for PBXProject "big-textbox" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,8 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B008EEA26E57AD100B34CE5 /* ContentView.swift in Sources */,
-				2B008EE826E57AD100B34CE5 /* big_textApp.swift in Sources */,
+				2B3F464126ECDB72003B122E /* EditorView.swift in Sources */,
+				2B3F464326ECDB7E003B122E /* BigTextBox_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +268,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"big-text/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
@@ -276,10 +278,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "chloenott.big-text";
+				PRODUCT_BUNDLE_IDENTIFIER = "chloenott.big-textbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -288,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"big-text/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
@@ -297,17 +301,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "chloenott.big-text";
+				PRODUCT_BUNDLE_IDENTIFIER = "chloenott.big-textbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2B008EDF26E57AD100B34CE5 /* Build configuration list for PBXProject "big-text" */ = {
+		2B008EDF26E57AD100B34CE5 /* Build configuration list for PBXProject "big-textbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2B008EF126E57AD300B34CE5 /* Debug */,
