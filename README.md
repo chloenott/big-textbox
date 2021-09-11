@@ -10,7 +10,7 @@ Features:
 - Transitions: When the editing area slides into view from the top, the big textbox area simultaneously blurs out of focus.
 - Intuitive: When the editor is blank, "tap to open editor" displays as the big text placeholder. The user can tap the screen to bring up the edit menu, edit their text, and then tap again (or tap the "Done" button) to close it.
 
-<img src="1.jpeg" width="200"> <img src="2.jpeg" width="200"> <img src="3.jpeg" width="200"> <img src="4.jpeg" width="200">
+<img src="1.jpeg" width="200"> <img src="3.jpeg" width="200"> <img src="4.jpeg" width="200">
 
 Wishlist:
 
