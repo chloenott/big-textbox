@@ -15,6 +15,7 @@ Wishlist:
 
 - Favorites. It would be nice to bring up common phrases without having to retype them.
 - Better dark mode compatibility. The black editor textbox is currently hard to see against a black background.
+- Focus to textbox automatically when the editor window slides in.
 
 <img src="1.jpeg" width="200"> <img src="2.jpeg" width="200"> <img src="3.jpeg" width="200"> <img src="4.jpeg" width="200">
 
