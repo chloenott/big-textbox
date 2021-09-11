@@ -1,15 +1,14 @@
 # Big Textbox
 <img src="big-text icon.png" width="100">
-Big Textbox is an unreleased iOS app that simply shows the large text of whatever is typed into the editor and resizes the text as needed to fit on the screen. It is my first app that I have been able to run on my phone with TestFlight.
+Big Textbox is an unreleased iOS app that displays large text of the contents in the text editor. It is my first app.
 
-The purpose of this app is to solve the amusingly common problem I have of: "I wish I could order food in person without repeating myself, because I have a quiet voice and the mask makes me even quieter." Plus, germs spread from talking, so visual communication seems like a good idea anyway.
+The purpose of this app is to solve the amusingly common problem I have of: "I wish I could order food in person without repeating myself a bunch of times, because I have a quiet voice and the mask makes me even quieter." Plus, germs spread from talking, so visual communication seems like a good idea anyway.
 
 Features:
 
-- Font size decreases automatically to fit all the text on one screen.
-- Transitions were added to make it feel more natural. For example, when the editing area slides into view from the top, the big textbox area simultaneously blurs out of focus. Quick durations so that they don't impede functionality.
-- Interface is reasonably intuitive. The user can tap the screen to bring up the edit menu, and tap again (or use the Done button) to close it.
-- An app icon was created with the style guidelines in mind.
+- Automatic font size adjustment: Font size changes automatically to fit all the text on one screen while keeping the size as large as possible.
+- Transitions: When the editing area slides into view from the top, the big textbox area simultaneously blurs out of focus.
+- Intuitive: When the editor is blank, "tap to open editor" displays as the big text placeholder. The user can tap the screen to bring up the edit menu, edit their text, and then tap again (or tap the "Done" button) to close it.
 
 Wishlist:
 
