@@ -9,6 +9,7 @@ Features:
 - Automatic font size adjustment: Font size changes automatically to fit all the text on one screen while keeping the size as large as possible.
 - Transitions: When the editing area slides into view from the top, the big textbox area simultaneously blurs out of focus.
 - Intuitive: When the editor is blank, "tap to open editor" displays as the big text placeholder. The user can tap the screen to bring up the edit menu, edit their text, and then tap again (or tap the "Done" button) to close it.
+- Icon was made to represent the function of the app: shows big text on a phone screen. I noticed that the subject within app icons are often simple, often only white with no second colors, and often the background has a slight gradient. Those constraint goals smashed toghether has limited outcomes, and so this is the one that stuck.
 
 <img src="1.jpeg" width="200"> <img src="3.jpeg" width="200"> <img src="4.jpeg" width="200">
 
