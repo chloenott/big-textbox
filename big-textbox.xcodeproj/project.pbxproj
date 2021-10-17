@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B2EAA2026ECF3D400086834 /* big_textboxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EAA1F26ECF3D400086834 /* big_textboxApp.swift */; };
-		2B2EAA2226ECF3D400086834 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EAA2126ECF3D400086834 /* ContentView.swift */; };
+		2B2EAA2026ECF3D400086834 /* BigTextbox_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EAA1F26ECF3D400086834 /* BigTextbox_App.swift */; };
+		2B2EAA2226ECF3D400086834 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EAA2126ECF3D400086834 /* EditorView.swift */; };
 		2B2EAA2426ECF3D500086834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2EAA2326ECF3D500086834 /* Assets.xcassets */; };
 		2B2EAA2726ECF3D500086834 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2EAA2626ECF3D500086834 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B2EAA1C26ECF3D400086834 /* big-textbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "big-textbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B2EAA1F26ECF3D400086834 /* big_textboxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = big_textboxApp.swift; sourceTree = "<group>"; };
-		2B2EAA2126ECF3D400086834 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B2EAA1F26ECF3D400086834 /* BigTextbox_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTextbox_App.swift; sourceTree = "<group>"; };
+		2B2EAA2126ECF3D400086834 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		2B2EAA2326ECF3D500086834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B2EAA2626ECF3D500086834 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B2EAA2826ECF3D500086834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,8 +52,8 @@
 		2B2EAA1E26ECF3D400086834 /* big-textbox */ = {
 			isa = PBXGroup;
 			children = (
-				2B2EAA1F26ECF3D400086834 /* big_textboxApp.swift */,
-				2B2EAA2126ECF3D400086834 /* ContentView.swift */,
+				2B2EAA1F26ECF3D400086834 /* BigTextbox_App.swift */,
+				2B2EAA2126ECF3D400086834 /* EditorView.swift */,
 				2B2EAA2326ECF3D500086834 /* Assets.xcassets */,
 				2B2EAA2826ECF3D500086834 /* Info.plist */,
 				2B2EAA2526ECF3D500086834 /* Preview Content */,
@@ -138,8 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B2EAA2226ECF3D400086834 /* ContentView.swift in Sources */,
-				2B2EAA2026ECF3D400086834 /* big_textboxApp.swift in Sources */,
+				2B2EAA2226ECF3D400086834 /* EditorView.swift in Sources */,
+				2B2EAA2026ECF3D400086834 /* BigTextbox_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +280,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "chloenott.big-textbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "chloenott.big-textbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
