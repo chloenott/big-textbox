@@ -17,9 +17,10 @@ struct EditorView: View {
                 .minimumScaleFactor(0.01)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .contentShape(Rectangle())
+                .onTapGesture { showEditor.toggle() }
                 .blur(radius: showEditor ? 10 : 0)
                 .opacity(showEditor ? 0.7 : 1.0)
-                .onTapGesture { showEditor.toggle() }
                 .animation(.easeInOut(duration: transitionDuration), value: showEditor)
             
             //The text editor area. The user edits the text here.
@@ -30,14 +31,25 @@ struct EditorView: View {
                 VStack {
                     VStack {
                         HStack{
+                            Button(action: {
+                                self.textToShow = ""
+                                }, label: {
+                                    Text("Clear")
+                                })
+                                .foregroundColor(.red)
+                            
+                            Spacer()
+                            
                             Text("Big Text Editor")
                                 .font(.headline)
+                            
                             Spacer()
+                            
                             Button(action: {
                                 showEditor.toggle()
-                            }, label: {
-                                Text("Done")
-                            })
+                                }, label: {
+                                    Text("Done")
+                                })
                             .foregroundColor(.blue)
                         }
                         TextEditor(text: $textToShow)
