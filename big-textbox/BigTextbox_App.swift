@@ -5,9 +5,12 @@ import SwiftUI
 //The app simply shows the large font text of whatever is typed in the editor and resizes it as needed to fit on the screen.
 //Future wishlist: add dark mode and favorites.
 struct BigTextbox_App: App {
+    @StateObject private var favoritesObject = Favorites()
+    
     var body: some Scene {
         WindowGroup {
             EditorView()
+                .environmentObject(favoritesObject)
         }
     }
 }

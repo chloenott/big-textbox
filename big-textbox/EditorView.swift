@@ -2,9 +2,12 @@ import SwiftUI
 
 struct EditorView: View {
     @State private var textToShow: String = String()
-    @State private var showEditor = false
+    @State private var showEditor = true
     @FocusState private var isFocused: Bool
-    let transitionDuration = 0.2
+    @EnvironmentObject var favoritesObject: Favorites
+    var defaults = UserDefaults.standard
+    let transitionDuration = 0.1
+    
     var body: some View {
         
         ZStack {
@@ -12,8 +15,8 @@ struct EditorView: View {
             //The big text display area. Big text shows here.
             //Text displayed gets resized to fit on one screen without scrolling.
             //Area blurs in/out of focus depending on showEditor toggle.
-            Text((textToShow.isEmpty && !showEditor) ? "Tap to Open Editor" : textToShow)
-                .font(.system(size: 140))
+            Text((textToShow.isEmpty && !showEditor) ? "..." : textToShow)
+                .font(.system(size: 130))
                 .minimumScaleFactor(0.01)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -30,6 +33,8 @@ struct EditorView: View {
             if showEditor {
                 VStack {
                     VStack {
+                        
+                        // The Clear / Add to Favorites / Done buttons above the textbox.
                         HStack{
                             Button(action: {
                                 self.textToShow = ""
@@ -40,8 +45,14 @@ struct EditorView: View {
                             
                             Spacer()
                             
-                            Text("Big Text Editor")
-                                .font(.headline)
+                            Button(action: {
+                                    favoritesObject.favorites.append(self.textToShow)
+                                    favoritesObject.favorites = Array(Set(favoritesObject.favorites))   // Prevent duplicates.
+                                    defaults.set(favoritesObject.favorites, forKey: "storedFavorites")   // Update user defaults for persistence.
+                                }, label: {
+                                    Text("Add to Favorites")
+                                })
+                                .foregroundColor(.blue)
                             
                             Spacer()
                             
@@ -50,10 +61,12 @@ struct EditorView: View {
                                 }, label: {
                                     Text("Done")
                                 })
-                            .foregroundColor(.blue)
+                                .foregroundColor(.blue)
                         }
+                        
+                        // The textbox
                         TextEditor(text: $textToShow)
-                            .colorMultiply(Color(white: 0.85).opacity(0.8))
+                            .colorMultiply(Color(white: 0.8).opacity(0.9))
                             .cornerRadius(10.0)
                             .frame(maxHeight: 120)
                             .focused($isFocused)
@@ -63,6 +76,42 @@ struct EditorView: View {
                                     isFocused = true
                                 }
                             }
+                        
+                        Divider()
+                        
+                        // Favorites list
+                        List {
+                            Section(header: Text("Favorites")) {
+                                ForEach(favoritesObject.favorites, id: \.self) {favorite in
+                                    HStack {
+                                        Button(action: {
+                                            self.textToShow = favorite
+                                        }, label: {
+                                            HStack {
+                                                Text(favorite)
+                                                    .foregroundColor(.blue)
+                                                    .contentShape(Rectangle())
+                                                Spacer()
+                                            }
+                                        })
+                                            .buttonStyle(BorderlessButtonStyle())
+                                        
+                                        
+                                        Button(action: {
+                                            favoritesObject.favorites.removeAll(where: { $0 == favorite })
+                                            defaults.set(favoritesObject.favorites, forKey: "storedFavorites")   // Update user defaults for persistence.
+                                        }, label: {
+                                            Image(systemName: "trash")
+                                        })
+                                            .foregroundColor(.gray)
+                                            .buttonStyle(BorderlessButtonStyle())
+                                    }
+                                }
+                            }
+                        }
+                        .cornerRadius(10.0)
+                        .opacity(0.9)
+                        
                     }
                     .padding([.leading, .bottom, .trailing])
                     Spacer()
@@ -73,7 +122,10 @@ struct EditorView: View {
 }
 
 struct EditorView_Previews: PreviewProvider {
+    static let favoritesObject = Favorites()
+    
     static var previews: some View {
         EditorView()
+            .environmentObject(favoritesObject)
     }
 }
