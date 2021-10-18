@@ -13,7 +13,6 @@ struct EditorView: View {
         ZStack {
 
             // The big text display area. Big text shows here.
-            VStack {
                 Text((textToShow.isEmpty && !showEditor) ? "..." : textToShow)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .contentShape(Rectangle())
@@ -22,12 +21,11 @@ struct EditorView: View {
                     .lineLimit(textToShow.filter{ $0 == " " }.count + 1)
                     .multilineTextAlignment(.leading)
                     .onTapGesture { showEditor.toggle() }
-            }
-            .blur(radius: showEditor ? 10 : 0)
-            .opacity(showEditor ? 0.7 : 1.0)
-            .animation(.easeInOut(duration: transitionDuration), value: showEditor)
+                    .blur(radius: showEditor ? 10 : 0)
+                    .opacity(showEditor ? 0.7 : 1.0)
+                    .animation(.easeInOut(duration: transitionDuration), value: showEditor)
             
-            //The text editor area. The user edits the text here. Appears as overlay.
+            //The text editor area is overlayed on top. The user edits the text here.
             if showEditor {
                 VStack {
                     VStack {
