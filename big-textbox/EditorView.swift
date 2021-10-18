@@ -12,24 +12,22 @@ struct EditorView: View {
         
         ZStack {
 
-            //The big text display area. Big text shows here.
-            //Text displayed gets resized to fit on one screen without scrolling.
-            //Area blurs in/out of focus depending on showEditor toggle.
-            Text((textToShow.isEmpty && !showEditor) ? "..." : textToShow)
-                .font(.system(size: 130))
-                .minimumScaleFactor(0.01)
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .contentShape(Rectangle())
-                .onTapGesture { showEditor.toggle() }
-                .blur(radius: showEditor ? 10 : 0)
-                .opacity(showEditor ? 0.7 : 1.0)
-                .animation(.easeInOut(duration: transitionDuration), value: showEditor)
+            // The big text display area. Big text shows here.
+            VStack {
+                Text((textToShow.isEmpty && !showEditor) ? "..." : textToShow)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .contentShape(Rectangle())
+                    .font(.system(size: 200))
+                    .minimumScaleFactor(0.01)
+                    .lineLimit(textToShow.filter{ $0 == " " }.count + 1)
+                    .multilineTextAlignment(.leading)
+                    .onTapGesture { showEditor.toggle() }
+            }
+            .blur(radius: showEditor ? 10 : 0)
+            .opacity(showEditor ? 0.7 : 1.0)
+            .animation(.easeInOut(duration: transitionDuration), value: showEditor)
             
-            //The text editor area. The user edits the text here.
-            //Intent is to have, in most use cases, all of the text in the editing area visible at once when editing with keyboard open.
-            //Appears on top of the big text display area when showEditor toggles to true.
-            //showEditor toggles when user taps on "Done" or taps in the big text display area.
+            //The text editor area. The user edits the text here. Appears as overlay.
             if showEditor {
                 VStack {
                     VStack {
@@ -86,6 +84,7 @@ struct EditorView: View {
                                     HStack {
                                         Button(action: {
                                             self.textToShow = favorite
+                                            showEditor.toggle()
                                         }, label: {
                                             HStack {
                                                 Text(favorite)
